@@ -23,8 +23,6 @@ use Spryker\Zed\OrderMatrix\OrderMatrixDependencyProvider;
 
 /**
  * @method \Spryker\Zed\OrderMatrix\OrderMatrixConfig getConfig()
- * @method \Spryker\Zed\OrderMatrix\Persistence\OrderMatrixEntityManagerInterface getEntityManager()
- * @method \Spryker\Zed\OrderMatrix\Persistence\OrderMatrixRepositoryInterface getRepository()
  */
 class OrderMatrixBusinessFactory extends AbstractBusinessFactory
 {

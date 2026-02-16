@@ -13,7 +13,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * @method \Spryker\Zed\OrderMatrix\Business\OrderMatrixFacadeInterface getFacade()
- * @method \Spryker\Zed\OrderMatrix\Persistence\OrderMatrixRepositoryInterface getRepository()
  */
 class OrderMatrixConsole extends Console
 {
