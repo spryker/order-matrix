@@ -26,33 +26,21 @@ use Spryker\Zed\OrderMatrix\OrderMatrixDependencyProvider;
  */
 class OrderMatrixBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\OrderMatrix\Dependency\Facade\OrderMatrixToOmsFacadeInterface
-     */
     public function getOmsFacade(): OrderMatrixToOmsFacadeInterface
     {
         return $this->getProvidedDependency(OrderMatrixDependencyProvider::FACADE_OMS);
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrix\Dependency\Client\OrderMatrixToStorageRedisClientInterface
-     */
     public function getStorageRedisClient(): OrderMatrixToStorageRedisClientInterface
     {
         return $this->getProvidedDependency(OrderMatrixDependencyProvider::CLIENT_STORAGE_REDIS);
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrix\Dependency\Service\OrderMatrixToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): OrderMatrixToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(OrderMatrixDependencyProvider::SERVICE_UTIL_ENCODING);
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrix\Business\Writer\OrderMatrixWriterInterface
-     */
     public function createOrderMatrixWriter(): OrderMatrixWriterInterface
     {
         return new OrderMatrixWriter(
@@ -64,9 +52,6 @@ class OrderMatrixBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrix\Business\Reader\OrderMatrixReaderInterface
-     */
     public function createOrderMatrixReader(): OrderMatrixReaderInterface
     {
         return new OrderMatrixReader(
@@ -75,17 +60,11 @@ class OrderMatrixBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrix\Business\Indexer\OrderMatrixIndexerInterface
-     */
     public function createOrderMatrixIndexer(): OrderMatrixIndexerInterface
     {
         return new OrderMatrixIndexer();
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrix\Business\Reader\OrderMatrixStatisticsReaderInterface
-     */
     public function createOrderMatrixStatisticsReader(): OrderMatrixStatisticsReaderInterface
     {
         return new OrderMatrixStatisticsReader(

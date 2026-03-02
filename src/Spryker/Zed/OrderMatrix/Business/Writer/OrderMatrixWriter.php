@@ -15,13 +15,6 @@ use Spryker\Zed\OrderMatrix\OrderMatrixConfig;
 
 class OrderMatrixWriter implements OrderMatrixWriterInterface
 {
-    /**
-     * @param \Spryker\Zed\OrderMatrix\Business\Reader\OrderMatrixReaderInterface $orderMatrixReader
-     * @param \Spryker\Zed\OrderMatrix\Business\Indexer\OrderMatrixIndexerInterface $orderMatrixGrouper
-     * @param \Spryker\Zed\OrderMatrix\Dependency\Client\OrderMatrixToStorageRedisClientInterface $storageRedisClient
-     * @param \Spryker\Zed\OrderMatrix\Dependency\Service\OrderMatrixToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Zed\OrderMatrix\OrderMatrixConfig $orderMatrixConfig
-     */
     public function __construct(
         protected OrderMatrixReaderInterface $orderMatrixReader,
         protected OrderMatrixIndexerInterface $orderMatrixGrouper,
@@ -31,9 +24,6 @@ class OrderMatrixWriter implements OrderMatrixWriterInterface
     ) {
     }
 
-    /**
-     * @return void
-     */
     public function writeOrderMatrix(): void
     {
         $orderMatrices = [];

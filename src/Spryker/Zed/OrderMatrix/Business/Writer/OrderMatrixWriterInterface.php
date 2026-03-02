@@ -9,8 +9,5 @@ namespace Spryker\Zed\OrderMatrix\Business\Writer;
 
 interface OrderMatrixWriterInterface
 {
-    /**
-     * @return void
-     */
     public function writeOrderMatrix(): void;
 }

@@ -13,19 +13,12 @@ use Spryker\Zed\OrderMatrix\OrderMatrixConfig;
 
 class OrderMatrixStatisticsReader implements OrderMatrixStatisticsReaderInterface
 {
-    /**
-     * @param \Spryker\Zed\OrderMatrix\Dependency\Client\OrderMatrixToStorageRedisClientInterface $storageRedisClient
-     * @param \Spryker\Zed\OrderMatrix\OrderMatrixConfig $orderMatrixConfig
-     */
     public function __construct(
         protected OrderMatrixToStorageRedisClientInterface $storageRedisClient,
         protected OrderMatrixConfig $orderMatrixConfig
     ) {
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\IndexedOrderMatrixResponseTransfer
-     */
     public function getOrderMatrixStatistics(): IndexedOrderMatrixResponseTransfer
     {
         $storageKey = $this->orderMatrixConfig->getOrderMatrixStorageKey();

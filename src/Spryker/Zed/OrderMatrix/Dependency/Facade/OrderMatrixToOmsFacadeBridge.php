@@ -28,11 +28,6 @@ class OrderMatrixToOmsFacadeBridge implements OrderMatrixToOmsFacadeInterface
         $this->omsFacade = $omsFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OrderMatrixCriteriaTransfer $orderMatrixCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\OrderMatrixCollectionTransfer
-     */
     public function getOrderMatrixCollection(OrderMatrixCriteriaTransfer $orderMatrixCriteriaTransfer): OrderMatrixCollectionTransfer
     {
         return $this->omsFacade->getOrderMatrixCollection($orderMatrixCriteriaTransfer);

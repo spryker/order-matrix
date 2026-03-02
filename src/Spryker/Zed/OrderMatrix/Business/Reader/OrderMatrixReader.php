@@ -15,10 +15,6 @@ use Spryker\Zed\OrderMatrix\OrderMatrixConfig;
 
 class OrderMatrixReader implements OrderMatrixReaderInterface
 {
-    /**
-     * @param \Spryker\Zed\OrderMatrix\OrderMatrixConfig $orderMatrixConfig
-     * @param \Spryker\Zed\OrderMatrix\Dependency\Facade\OrderMatrixToOmsFacadeInterface $omsFacade
-     */
     public function __construct(
         protected OrderMatrixConfig $orderMatrixConfig,
         protected OrderMatrixToOmsFacadeInterface $omsFacade

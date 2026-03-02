@@ -102,9 +102,6 @@ class OrderMatrixFacadeTest extends Unit
         $this->tester->assertEquals($expectedResult, $result->getMatrices());
     }
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();

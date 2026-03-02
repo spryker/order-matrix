@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\OrderMatrixCriteriaTransfer;
 
 interface OrderMatrixToOmsFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\OrderMatrixCriteriaTransfer $orderMatrixCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\OrderMatrixCollectionTransfer
-     */
     public function getOrderMatrixCollection(OrderMatrixCriteriaTransfer $orderMatrixCriteriaTransfer): OrderMatrixCollectionTransfer;
 
     /**

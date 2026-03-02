@@ -33,11 +33,6 @@ class OrderMatrixDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const CLIENT_STORAGE_REDIS = 'CLIENT_STORAGE_REDIS';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -49,11 +44,6 @@ class OrderMatrixDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addOmsFacade(Container $container): Container
     {
         $container->set(static::FACADE_OMS, function (Container $container) {
@@ -65,11 +55,6 @@ class OrderMatrixDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {
@@ -81,11 +66,6 @@ class OrderMatrixDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addStorageRedisClient(Container $container): Container
     {
         $container->set(static::CLIENT_STORAGE_REDIS, function (Container $container) {
